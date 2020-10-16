@@ -1,0 +1,12 @@
+---
+- name: Ansible playbook to copy a file
+  hosts: all
+  become: true
+  tasks:
+  - name: copy a file
+    copy:
+      src: /etc/hosts
+      dest: /tmp
+      mode: 0600
+      owner: john
+      
